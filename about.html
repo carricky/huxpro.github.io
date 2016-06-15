@@ -1,20 +1,18 @@
 ---
 layout: page
 title: "About"
-description: "Hey, this is Siyuan Gao."
+description: "Yet another geek."
 header-img: "img/about-bg.jpg"
 ---
 
 <div class="en post-container">
-    <blockquote><p>Yet another Frontend Engineer. <br>
-    Yet another Lifelong Designer.</p></blockquote>
 
     <p>
         Hi, my name is <b>Siyuan Gao (高思远)</b>. My first name is pronounced pretty much as See Young, but it's still hard to remember, so you are also welcome to call me <b>Ricky</b>. 
     </p>
-    
+
     <p>
-        I was born in Zibo, China, and left my hometown for college in Hangzhou, China, where I finished my bachelor degree in Zhejiang University. <a href="http://www.zju.edu.cn/english/">Zhejiang University</a> is one of the most prestigious universities in China. For now, I will join <a href="http://www.yale.edu/">Yale Univeristy </a> as a Ph.D. student in the summer of 2016. Keep updated with this website to see more of my future life in Yale. 
+        I was born in Zibo, China, and left my hometown for college in Hangzhou, China, where I finished my bachelor degree in <a href="http://www.zju.edu.cn/english/">Zhejiang University</a>. Zhejiang University is one of the most prestigious universities in China. For now, I will join <a href="http://www.yale.edu/">Yale Univeristy </a> as a Ph.D. student in the summer of 2016. Keep updated with this website to see more of my future life in Yale. 
     </p>
 
     <h5>Resumes</h5>
@@ -27,7 +25,7 @@ header-img: "img/about-bg.jpg"
 
 {% if site.duoshuo_username %}
 <!-- 多说评论框 start -->
-<div class="comment">
+<!-- <div class="comment">
     <div class="ds-thread"
     {% if site.duoshuo_username == "huxblog" %}
         data-thread-id="1187623191091085319"
@@ -37,8 +35,11 @@ header-img: "img/about-bg.jpg"
 
     data-title="{{page.title}}"
     data-url="{{site.url}}/about/"></div>
-</div>
+</div> -->
+<div class="ds-thread" data-thread-key="{{site.duoshuo_username}}/about" data-title="{{page.title}}" ></div>
 <!-- 多说评论框 end -->
+
+
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -54,3 +55,15 @@ var duoshuoQuery = {short_name:"siyuangao"};
     </script>
 <!-- 多说公共JS代码 end -->
 {% endif %}
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79368743-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
