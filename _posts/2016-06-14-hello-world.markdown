@@ -15,9 +15,9 @@ tags:
 
 # Greetings, my friend!
 
-###### This is my first blog as the hello world. Briefly, I build this website based on jekyll and github pages. Thanks to these convenient tools that enables a more user-friendly website building experiences.
+This is my first blog as the hello world. Briefly, I build this website based on jekyll and github pages. Thanks to these convenient tools that enables a more user-friendly website building experiences.
 
-###### Look forwards to more functions and contents.
+Look forwards to more functions and contents.
   
 
 

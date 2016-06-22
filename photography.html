@@ -2,7 +2,19 @@
 layout: photo
 title: Photography
 photography:
-
+- grad:
+  title: Graduation
+  image:
+  - image_path: /img/photography/grad/1.jpg
+    category: grad
+  - image_path: /img/photography/grad/2.jpg
+    category: grad
+  - image_path: /img/photography/grad/3.jpg
+    category: grad
+  - image_path: /img/photography/grad/4.jpg
+    category: grad
+  - image_path: /img/photography/grad/5.jpg
+    category: grad
 - SAC:
   title: Sacramento
   image:
@@ -11,7 +23,7 @@ photography:
   - image_path: /img/photography/SAC/bridge.jpg
     category: SAC
 
-
+header-img: "img/bg/home-bg-art.jpg"
 
 
 ---
@@ -37,7 +49,7 @@ photography:
         {% for item in cat.image %}
         <div class="col-lg-2 col-sm-3">
           <a href="{{ item.image_path }}" data-lightbox="{{item.category}}">
-            <img  src="{{ item.image_path }}" class="img-thumbnail" alt="{{ item.project }}" >
+            <img  src="{{ item.image_path }}" class="img-thumbnail image-responsive" alt="{{ item.project }}" >
           </a>
         </div>
         {% endfor %}
