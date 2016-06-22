@@ -1,0 +1,47 @@
+---
+layout: photo
+title: Photography
+photography:
+
+- SAC:
+  title: Sacramento
+  image:
+  - image_path: /img/photography/SAC/tower.jpg
+    category: SAC
+  - image_path: /img/photography/SAC/bridge.jpg
+    category: SAC
+
+
+
+
+---
+<!-- <section class="bg-dark">
+  <div class="text-center">
+    <h1>Portfolio</h1>
+  </div>
+</section> -->
+<!-- <section class="bg-dark">
+  <div class="text-left">
+    <h1>Zhejiang</h1>
+  </div>
+</section> -->
+
+
+{% for cat in page.photography %}
+  <section class="no-padding" id="portfolio">
+    <div class="container">
+      <div class="row no-gutter">
+        <div class="text-left">
+          <h1>{{cat.title}}</h1>
+        </div>
+        {% for item in cat.image %}
+        <div class="col-lg-2 col-sm-3">
+          <a href="{{ item.image_path }}" data-lightbox="{{item.category}}">
+            <img  src="{{ item.image_path }}" class="img-thumbnail" alt="{{ item.project }}" >
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>  
+{% endfor %}
