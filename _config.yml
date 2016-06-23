@@ -11,14 +11,14 @@ port: 5000
 
 
 # SNS settings
-RSS: false
-weibo_username:     carricky
-zhihu_username:     siyuan-gao
+#RSS: false
+#weibo_username:     carricky
+#zhihu_username:     siyuan-gao
 github_username:    carricky
 #twitter_username:  huxpro
 facebook_username:  siyuangaoricky
 linkedin_username:  siyuangao
-
+email_account:      rickygao213@gmail.com
 
 
 # Build settings
