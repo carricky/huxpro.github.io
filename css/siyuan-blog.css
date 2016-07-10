@@ -161,6 +161,14 @@ h5,
 h6{
   font-size: 15px
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: Georgia, serif;
+}
 /*h6 {
   font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
@@ -426,6 +434,7 @@ pre code {
   line-height: 1.7;
 }
 .navbar-custom .navbar-brand {
+  font-size: 24px;
   font-weight: 800;
   color: white;
   height: 56px;
@@ -547,7 +556,7 @@ pre code {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0;
+    padding: 70px 0 60px;
   }
 }
 .intro-header .site-heading {
@@ -904,7 +913,7 @@ img::-moz-selection {
 }
 @media only screen and (min-width: 768px) {
   #tag-heading {
-    padding: 55px 0;
+    padding: 100px 0;
   }
 }
 #tag_cloud {
