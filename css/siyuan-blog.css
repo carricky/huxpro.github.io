@@ -35,6 +35,11 @@
 .sidebar-container .tags a:active {
   border-color: #0085a1;
 }
+.sidebar-container .categories a {
+  border-color: #bfbfbf;
+  font-size: 2px:;
+  color: #0085a1 ;
+} 
 .sidebar-container .short-about img {
   width: 80%;
   display: block;
@@ -1091,3 +1096,5 @@ img::-moz-selection {
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
+
+

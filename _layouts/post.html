@@ -28,11 +28,11 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <div class="tags">
-                        {% for tag in page.tags %}
+<!--                     <div class="tags">
+                        {% for category in site.categories %}
                         <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
                         {% endfor %}
-                    </div>
+                    </div> -->
                     <h1>{{ page.title }}</h1>
                     {% comment %}
                         always create a h2 for keeping the margin , Hux
@@ -141,12 +141,27 @@ layout: default
             </div>  
 
     <!-- Side Catalog Container -->
+
         {% if page.catalog %}
             <div class="
                 col-lg-2 col-lg-offset-0
                 visible-lg-block
                 sidebar-container
                 catalog-container">
+                <hr class="hidden-sm hidden-xs">
+<!--                 <h5>Categories</h5>
+                <div class="tags">
+                    <ul class="archive-list">
+                        <div class="archiveslist archive-float clearfix">
+                        {% for category in site.categories  %}
+                            <li class="archive-list-item">
+                            <a class="archive-list-link" href="#{{ category[0] }}">{{ category[0] }}</a>
+                            <span class="archive-list-count">{{ category[1] | size }}</span>
+                            </li>
+                        {% endfor %}
+                        </div>
+                    </ul>
+                </div> -->
                 <div class="side-catalog">
                     <hr class="hidden-sm hidden-xs">
                     <h5>
@@ -154,43 +169,13 @@ layout: default
                     </h5>
                     <ul class="catalog-body"></ul>
                 </div>
+
+            </div>
             </div>
         {% endif %}
 
     <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
 
-                <!-- Featured Tags -->
-                {% if site.featured-tags %}
-                <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
-                </section>
-                {% endif %}
-
-                <!-- Friends Blog -->
-                {% if site.friends %}
-                <hr>
-                <h5>FRIENDS</h5>
-                <ul class="list-inline">
-                    {% for friend in site.friends %}
-                        <li><a href="{{friend.href}}">{{friend.title}}</a></li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </div>
         </div>
     </div>
 </article>
