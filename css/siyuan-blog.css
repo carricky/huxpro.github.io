@@ -244,6 +244,24 @@ pre code {
 .post-container a:focus {
   color: #0085a1;
 }
+.post-container h1{
+  font-size: 36px;
+}
+.post-container h2{
+  font-size: 30px;
+}
+.post-container h3{
+  font-size: 24px;
+}
+.post-container h4{
+  font-size: 18px;
+}
+.post-container h5{
+  font-size: 14px;
+}
+.post-container h6{
+  font-size: 12px;
+}
 .post-container h1,
 .post-container h2,
 .post-container h3,
