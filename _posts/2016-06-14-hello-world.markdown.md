@@ -20,6 +20,8 @@ This is my first blog as the hello world. Briefly, I build this website based on
 
 Look forwards to more functions and contents.
   
+Test math equations
 
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 
 written on June 14th, 2016.
