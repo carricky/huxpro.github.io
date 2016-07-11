@@ -76,12 +76,27 @@ layout: default
                     <h5><a href="/blogs">Categories</a></h5>
                     <ul class="list-group">
                         {% for category in site.categories  %}
-                            <a href="/categories/#{{ category[0] }}" class="list-group-item">
+                            <a href="/categories/#{{ category[0] }}" class="list-group-item" style="border-left: 5px solid">
                             <span class="badge">{{ category[1] | size }}</span>
                                 {{ category[0] }}                              
                             </a>
                         {% endfor %}                        
                     </ul>
+                {% endif %}
+                {% if site.featured-tags %}
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">Featured Tags</a></h5>
+                    <div class="tags">
+                        {% for tag in site.tags %}
+                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                                <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
+                                    {{ tag[0] }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </section>
                 {% endif %}
     		</div>
         {% endif %}
