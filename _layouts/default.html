@@ -11,13 +11,16 @@
 </div>
 
     {% include nav.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
+<div id="container">
+	<div id="content">
+	    {{ content }}
+	</div>
+</div>
+	    {% include footer.html %}
 
 <!-- Migrate from head to bottom, no longer block render and still work -->
 <script src="/js/lightbox.js"></script>
+
 </body>
 
 </html>

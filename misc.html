@@ -29,30 +29,22 @@ header-img: "img/bg/home-bg-art.jpg"
 ---
 
 
-<style>
+<!-- <style>
   body {
       font: 400 15px/1.8 Lato, sans-serif;
       color: #777;
   }
-  h2 {
-      font:bold;
-      font-size: 30px;   
-      letter-spacing: 3px;
-      color: #778;
-  }
   .item-image {
-
   padding-bottom: 50%; /* here the desired aspect ratio */
 }
-</style>
-{% for cat in page.photography %}
+</style> -->
+<!-- {% for cat in page.photography %}
   <section class="no-padding" id="portfolio">
     <div class="container">
       <div class="row no-gutter">
         <div class="text-left">
-          <div class="page-header">
-            <h2>{{cat.title}}</h2>
-          </div>
+          <h2>{{cat.title}}</h2>
+          <hr class="small-margin">
         </div>
         {% for item in cat.image %}
         <div class="col-lg-2">
@@ -64,4 +56,23 @@ header-img: "img/bg/home-bg-art.jpg"
       </div>
     </div>
   </section>  
-{% endfor %}
+{% endfor %} -->
+<div class="container">
+  <ul>
+    <li><h2>Graduation</h2>
+      <hr class="small-margin">
+      <div class="row">
+        <div class="col-sm-4 misc-image">
+          <a href="/img/photography/graduation.jpg" data-lightbox="grad">
+            <img  src="/img/photography/graduation.jpg" class="img-thumbnail image-responsive" alt="image" >
+          </a> 
+        </div>
+          <p>
+          Graduated from Zhejiang University in the summer of 2016. And I took this interesting pic in a classroom of Zijingang Campus with a slogan on the blackboard "The scope for this exam is infinite". <br>
+          Actually, as a student major in math, most of our exams are about proving theorems and we often feel that there are too many theorems for us to understand.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -2,53 +2,10 @@
 layout: default
 ---
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading" id="tag-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <!--<hr class="small">-->
-                    <span class="subheading">{{ page.description }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
 <!-- Main Content -->
 <div class="container">
 	<div class="row">
-        {% if site.sidebar == false %}
-<!-- NO SIDEBAR -->
-    <!-- PostList Container -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 postlist-container">
-                {{ content }}
-            </div>
 
-    <!-- Sidebar Container -->
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
-
-                <!-- Featured Tags -->
-                {% if site.featured-tags %}
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">Categories</a></h5>
-                    <div class="tags">
-        				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
-                				<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
-                                    {{ tag[0] }}
-                                </a>
-                            {% endif %}
-        				{% endfor %}
-        			</div>
-                </section>
-                {% endif %}
-
-            </div>
-        {% else %}
 
 <!-- USE SIDEBAR -->
     <!-- PostList Container -->
@@ -72,11 +29,10 @@ layout: default
                 <!-- Categories -->
                 {% if site.categories %}
                 <section>
-                    <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/blogs">Categories</a></h5>
-                    <ul class="list-group">
+                    <h5><a href="/blogs"  >Categories</a></h5>
+                    <ul class="list-group ul-boxed">
                         {% for category in site.categories  %}
-                            <a href="/categories/#{{ category[0] }}" class="list-group-item" style="border-left: 5px solid">
+                            <a href="/categories/#{{ category[0] }}" class="list-group-item">
                             <span class="badge">{{ category[1] | size }}</span>
                                 {{ category[0] }}                              
                             </a>
@@ -86,7 +42,7 @@ layout: default
                 {% if site.featured-tags %}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}">Featured Tags</a></h5>
+                    <h5><a href="{{'/tags/' | prepend: site.baseurl }}" >Featured Tags</a></h5>
                     <div class="tags">
                         {% for tag in site.tags %}
                             {% if tag[1].size > {{site.featured-condition-size}} %}
@@ -99,6 +55,5 @@ layout: default
                 </section>
                 {% endif %}
     		</div>
-        {% endif %}
 	</div>
 </div>
